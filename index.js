@@ -97,6 +97,46 @@ const cars = [
 
 updateAgeByName(peopleArray, 'Jane', 35);
 
+// 6.Task: Array Reduction
+// Create An Array Of Numbers. Write A Function That Uses The Reduce Method To Calculate The Sum Of All Even Numbers In The Array.
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const sumOfEvenNumbers = (arr) => {
+    return arr.reduce((sum, num) => {
+        if (num % 2 === 0) {
+            return sum + num;
+        } else {
+            return sum;
+        }
+    }, 0);
+};
+
+const result = sumOfEvenNumbers(numbers);
+console.log(result); // Output will be 30 (2 + 4 + 6 + 8 + 10)
+
+// 7.Write A Function That Determines Whether A Given Year Is A Leap Year.
+const isLeapYear = (year) => {
+  if (year % 4 === 0) {
+      if (year % 100 === 0) {
+          if (year % 400 === 0) {
+              return true;
+          } else {
+              return false;
+          }
+      } else {
+          return true;
+      }
+  } else {
+      return false;
+  }
+};
+
+// Example usage:
+console.log(isLeapYear(2020)); // Output: true
+console.log(isLeapYear(1900)); // Output: false
+console.log(isLeapYear(2000)); // Output: true
+console.log(isLeapYear(2021)); // Output: false
+
 
 
   
