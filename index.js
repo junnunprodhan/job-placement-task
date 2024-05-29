@@ -137,6 +137,125 @@ console.log(isLeapYear(1900)); // Output: false
 console.log(isLeapYear(2000)); // Output: true
 console.log(isLeapYear(2021)); // Output: false
 
+// 8.Task: Count Vowels:
+
+// Write A Function That Counts The Number Of Vowels In A Given String.
+function countVowels(s) {
+  const vowels = 'aeiouAEIOU'; // list of vowels (both lowercase and uppercase)
+  let count = 0; // initialize count to 0
+  for (let char of s) { // iterate over each character in the string
+      if (vowels.includes(char)) { // check if the character is a vowel
+          count++; // increment the count if it is a vowel
+      }
+  }
+  return count; // return the final count of vowels
+}
+
+// Example usage:
+const inputString = "Hello, World!";
+console.log(`The number of vowels in '${inputString}' is ${countVowels(inputString)}.`);
+
+// 9.Task: Unique Values
+
+// Create An Array Of Numbers With Some Duplicate Values. Write A Function To Filter Out The Duplicate Values And Return A New Array With Only Unique Numbers. Print The Result.
+// Function to filter out duplicate values and return an array with unique numbers
+function removeDuplicates(arr) {
+  // Using a Set to store unique values
+  let uniqueSet = new Set(arr);
+  // Converting the Set back to an array
+  return [...uniqueSet];
+}
+
+// Create an array of numbers with some duplicate values
+const nums = [1, 2, 3, 4, 5, 2, 3, 6, 7, 8, 4, 9, 10, 6];
+
+// Call the function and store the result
+const uniqueNumbers = removeDuplicates(nums);
+
+// Print the result
+console.log('Original array:',nums );
+console.log('Array with unique values:', uniqueNumbers);
+
+
+// 10. Task: Find Maximum Value:
+
+// Write A Function That Takes An Array Of Numbers And Returns The Maximum Value.
+// Function to find the maximum value in an array of numbers
+function findMaxValue(arr) {
+  if (arr.length === 0) {
+      throw new Error("Array is empty");
+  }
+  let max = arr[0]; // Initialize max with the first element of the array
+  for (let i = 1; i < arr.length; i++) { // Start loop from the second element
+      if (arr[i] > max) { // If the current element is greater than max
+          max = arr[i]; // Update max
+      }
+  }
+  return max; // Return the maximum value
+}
+
+// Example usage:
+const nNumbers = [3, 5, 7, 2, 8, -1, 4, 10, 12];
+const maxValue = findMaxValue(nNumbers );
+console.log(`The maximum value in the array is ${maxValue}.`);
+
+// 11. Task: Advanced Sorting
+
+// Create An Array Of Objects Representing Students With 'Name' And 'Grades' Properties. Write A Function To Sort The Students By Average Grade In Descending Order.
+// Function to calculate the average of an array of numbers
+function calculateAverage(grades) {
+  const total = grades.reduce((sum, grade) => sum + grade, 0);
+  return total / grades.length;
+}
+
+// Function to sort students by average grade in descending order
+function sortStudentsByAverageGrade(students) {
+  return students.sort((a, b) => {
+      const averageA = calculateAverage(a.grades);
+      const averageB = calculateAverage(b.grades);
+      return averageB - averageA; // Sort in descending order
+  });
+}
+
+// Create an array of student objects
+const students = [
+  { name: 'Alice', grades: [85, 90, 78] },
+  { name: 'Bob', grades: [80, 85, 88] },
+  { name: 'Charlie', grades: [90, 95, 92] },
+  { name: 'David', grades: [70, 75, 80] },
+  { name: 'Eve', grades: [88, 82, 91] }
+];
+
+// Call the function to sort students
+const sortedStudents = sortStudentsByAverageGrade(students);
+
+// Print the result
+console.log('Students sorted by average grade in descending order:');
+sortedStudents.forEach(student => {
+  console.log(`${student.name}: ${calculateAverage(student.grades).toFixed(2)}`);
+});
+
+
+// 12. Task: Functional Programming - Reduce
+
+// Write A Function That Uses The Reduce Function To Calculate The Total Value Of An Array Of Objects With A 'Quantity' And 'Price' Property.
+// Function to calculate the total value of an array of objects with 'quantity' and 'price' properties
+function calculateTotalValue(items) {
+  return items.reduce((total, item) => {
+      return total + (item.quantity * item.price);
+  }, 0);
+}
+
+// Example usage:
+const shoppingCart = [
+  { quantity: 2, price: 10.00 },
+  { quantity: 1, price: 15.50 },
+  { quantity: 4, price: 7.25 },
+  { quantity: 3, price: 5.99 }
+];
+
+const totalValue = calculateTotalValue(shoppingCart);
+console.log(`The total value of the shopping cart is $${totalValue.toFixed(2)}.`);
 
 
   
