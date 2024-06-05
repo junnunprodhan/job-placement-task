@@ -276,3 +276,47 @@ const years = [1900, 2000, 2004, 2019, 2020];
 years.forEach(year => {
   console.log(`${year} is a leap year: ${isLeapYear(year)}`);
 });
+
+// 14. task: result sheet
+// Step 1: Define the data structure
+const studentsOfGrade = [
+  { name: 'Alice', scores: { math: 85, english: 92, science: 78 } },
+  { name: 'Bob', scores: { math: 75, english: 89, science: 94 } },
+  { name: 'Charlie', scores: { math: 90, english: 87, science: 88 } },
+];
+
+// Step 2: Calculate total and average
+studentsOfGrade.forEach(student => {
+  const scores = student.scores;
+  const total = Object.values(scores).reduce((sum, score) => sum + score, 0);
+  const average = total / Object.values(scores).length;
+  student.total = total;
+  student.average = average.toFixed(2);
+});
+
+// Step 3: Assign grades
+studentsOfGrade.forEach(student => {
+  const average = student.average;
+  if (average >= 90) {
+    student.grade = 'A';
+  } else if (average >= 80) {
+    student.grade = 'B';
+  } else if (average >= 70) {
+    student.grade = 'C';
+  } else if (average >= 60) {
+    student.grade = 'D';
+  } else {
+    student.grade = 'F';
+  }
+});
+
+// Step 4: Display the results
+console.log('Result Sheet:');
+studentsOfGrade.forEach(student => {
+  console.log(`Name: ${student.name}`);
+  console.log(`Scores: Math - ${student.scores.math}, English - ${student.scores.english}, Science - ${student.scores.science}`);
+  console.log(`Total: ${student.total}`);
+  console.log(`Average: ${student.average}`);
+  console.log(`Grade: ${student.grade}`);
+  console.log('---------------------------');
+});
