@@ -258,4 +258,21 @@ const totalValue = calculateTotalValue(shoppingCart);
 console.log(`The total value of the shopping cart is $${totalValue.toFixed(2)}.`);
 
 
-  
+// 13. task : leap year
+function isLeapYear(year) {
+  if (year % 400 === 0) {
+    return true;
+  } else if (year % 100 === 0) {
+    return false;
+  } else if (year % 4 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// Test the function
+const years = [1900, 2000, 2004, 2019, 2020];
+years.forEach(year => {
+  console.log(`${year} is a leap year: ${isLeapYear(year)}`);
+});
