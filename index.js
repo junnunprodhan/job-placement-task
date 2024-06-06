@@ -335,3 +335,19 @@ function inchesToFeet(inches) {
 const inches = 36;
 const feet = inchesToFeet(inches);
 console.log(`${inches} inches is equal to ${feet} feet.`);
+
+// 16 task : convert text to number
+function convertToNumber(text) {
+  const number = Number(text);
+  if (isNaN(number)) {
+      console.error("Invalid input: cannot convert to number.");
+      return null;
+  }
+  return number;
+}
+
+const validText = "123";
+const invalidText = "abc";
+
+console.log(convertToNumber(validText));  // Output: 123
+console.log(convertToNumber(invalidText));  // Output: Invalid input: cannot convert to number. null
