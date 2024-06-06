@@ -278,6 +278,7 @@ years.forEach(year => {
 });
 
 // 14. task: result sheet
+
 // Step 1: Define the data structure
 const studentsOfGrade = [
   { name: 'Alice', scores: { math: 85, english: 92, science: 78 } },
@@ -312,9 +313,10 @@ studentsOfGrade.forEach(student => {
 
 // Step 4: Display the results
 console.log('Result Sheet:');
+
 studentsOfGrade.forEach(student => {
   console.log(`Name: ${student.name}`);
-  console.log(`Scores: Math - ${student.scores.math}, English - ${student.scores.english}, Science - ${student.scores.science}`);
+  console.log(`Scores: Math - ${student.scores.math},  English - ${student.scores.english}, Science - ${student.scores.science}`);
   console.log(`Total: ${student.total}`);
   console.log(`Average: ${student.average}`);
   console.log(`Grade: ${student.grade}`);
