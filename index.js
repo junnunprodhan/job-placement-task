@@ -323,3 +323,15 @@ studentsOfGrade.forEach(student => {
   console.log('---------------------------');
 });
 
+// 15 task : inch to feet
+// Function to convert inches to feet
+function inchesToFeet(inches) {
+  // There are 12 inches in a foot
+  const feet = inches / 12;
+  return feet;
+}
+
+// Example usage
+const inches = 36;
+const feet = inchesToFeet(inches);
+console.log(`${inches} inches is equal to ${feet} feet.`);
