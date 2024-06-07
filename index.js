@@ -279,7 +279,7 @@ years.forEach(year => {
 
 // 14. task: result sheet
 
-// Step 1: Define the data structure
+
 const studentsOfGrade = [
   { name: 'Alice', scores: { math: 85, english: 92, science: 78 } },
   { name: 'Bob', scores: { math: 75, english: 89, science: 94 } },
