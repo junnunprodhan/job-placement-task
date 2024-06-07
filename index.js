@@ -320,7 +320,6 @@ studentsOfGrade.forEach(student => {
   console.log(`Total: ${student.total}`);
   console.log(`Average: ${student.average}`);
   console.log(`Grade: ${student.grade}`);
-  console.log('---------------------------');
 });
 
 // 15 task : inch to feet
