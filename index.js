@@ -370,3 +370,11 @@ function removeDuplicates(arr) {
 
 const nus = [1, 2, 2, 3, 4, 4, 5];
 console.log(removeDuplicates(nus)); // Output: [1, 2, 3, 4, 5]
+
+// Problem: Reversing a String
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+
+const input = "Hello, World!";
+console.log(reverseString(input)); // Output: "!dlroW ,olleH"
