@@ -376,5 +376,14 @@ function reverseString(str) {
   return str.split('').reverse().join('');
 }
 
-const input = "Hello, World!";
+const inputs = "Hello, World!";
 console.log(reverseString(input)); // Output: "!dlroW ,olleH"
+
+// Problem: Checking for Palindrome
+function isPalindrome(str) {
+  const cleaned = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  return cleaned === cleaned.split('').reverse().join('');
+}
+
+const input = "A man, a plan, a canal, Panama";
+console.log(isPalindrome(input)); // Output: true
