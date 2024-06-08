@@ -406,3 +406,14 @@ const obj1 = { a: 1, b: 2 };
 const obj2 = { b: 3, c: 4 };
 const merged = mergeObjects(obj1, obj2);
 console.log(merged); // Output: { a: 1, b: 3, c: 4 }
+
+
+// Problem: Fibonacci Sequence
+function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+const num = 10;
+console.log(fibonacci(num)); // Output: 55
+
