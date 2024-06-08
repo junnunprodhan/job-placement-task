@@ -362,3 +362,11 @@ function findLargestNumber(arr) {
 
 const numbs = [10, 20, 30, 40, 50];
 console.log(findLargestNumber(numbs)); // Output: 50
+
+// Problem: Removing Duplicates from an Array
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+
+const nus = [1, 2, 2, 3, 4, 4, 5];
+console.log(removeDuplicates(nus)); // Output: [1, 2, 3, 4, 5]
