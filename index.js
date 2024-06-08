@@ -414,6 +414,15 @@ function fibonacci(n) {
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-const num = 10;
-console.log(fibonacci(num)); // Output: 55
+const no = 10;
+console.log(fibonacci(no)); // Output: 55
 
+// Problem: Factorial of a Number
+
+function factorial(n) {
+  if (n <= 1) return 1;
+  return n * factorial(n - 1);
+}
+
+const nob = 5;
+console.log(factorial(nob)); // Output: 120
