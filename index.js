@@ -353,3 +353,12 @@ const invalidText = "abc";
 
 console.log(convertToNumber(validText));  // Output: 123
 console.log(convertToNumber(invalidText));  // Output: Invalid input: cannot convert to number. null
+
+// 1. Array Manipulation
+// Problem: Finding the Largest Number in an Array
+function findLargestNumber(arr) {
+  return Math.max(...arr);
+}
+
+const numbs = [10, 20, 30, 40, 50];
+console.log(findLargestNumber(numbs)); // Output: 50
