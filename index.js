@@ -387,3 +387,22 @@ function isPalindrome(str) {
 
 const input = "A man, a plan, a canal, Panama";
 console.log(isPalindrome(input)); // Output: true
+
+// Problem: Cloning an Object
+function cloneObject(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
+const original = { a: 1, b: 2 };
+const clone = cloneObject(original);
+console.log(clone); // Output: { a: 1, b: 2 }
+
+// Problem: Merging Two Objects
+function mergeObjects(obj1, obj2) {
+  return { ...obj1, ...obj2 };
+}
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+const merged = mergeObjects(obj1, obj2);
+console.log(merged); // Output: { a: 1, b: 3, c: 4 }
