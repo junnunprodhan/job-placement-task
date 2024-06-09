@@ -436,3 +436,34 @@ console.log(squared); // Output: [1, 4, 9, 16, 25]
 // Problem: Using filter to Filter an Array
 const evens = ns.filter(num => num % 2 === 0);
 console.log(evens); // Output: [2, 4]
+
+// Implementing a Queue
+class Queue {
+  constructor() {
+    this.items = [];
+  }
+
+  enqueue(element) {
+    this.items.push(element);
+  }
+
+  dequeue() {
+    if (this.items.length === 0) return "Underflow";
+    return this.items.shift();
+  }
+
+  front() {
+    if (this.items.length === 0) return "No elements in Queue";
+    return this.items[0];
+  }
+
+  isEmpty() {
+    return this.items.length === 0;
+  }
+}
+
+const queue = new Queue();
+queue.enqueue(10);
+queue.enqueue(20);
+console.log(queue.dequeue()); // Output: 10
+console.log(queue.front()); // Output: 20
