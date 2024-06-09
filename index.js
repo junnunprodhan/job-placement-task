@@ -427,3 +427,8 @@ function factorial(n) {
 
 const nob = 5;
 console.log(factorial(nob)); // Output: 120
+
+// Problem: Using map to Transform an Array
+const ns = [1, 2, 3, 4, 5];
+const squared = ns.map(num => num ** 2);
+console.log(squared); // Output: [1, 4, 9, 16, 25]
