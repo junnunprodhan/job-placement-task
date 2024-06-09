@@ -432,3 +432,7 @@ console.log(factorial(nob)); // Output: 120
 const ns = [1, 2, 3, 4, 5];
 const squared = ns.map(num => num ** 2);
 console.log(squared); // Output: [1, 4, 9, 16, 25]
+
+// Problem: Using filter to Filter an Array
+const evens = ns.filter(num => num % 2 === 0);
+console.log(evens); // Output: [2, 4]
