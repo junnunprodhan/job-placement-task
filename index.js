@@ -569,3 +569,29 @@ const weights = [10, 20, 30];
 const capacity = 50;
 
 console.log(knapsack(values, weights, capacity)); // Output: 220
+
+
+// 3. Asynchronous Programming
+// Problem: Implementing Promises and Async/Await
+function fetchData(url) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (url === 'https://api.example.com/data') {
+        resolve({ data: 'Sample Data' });
+      } else {
+        reject(new Error('Invalid URL'));
+      }
+    }, 1000);
+  });
+}
+
+async function getData() {
+  try {
+    const response = await fetchData('https://api.example.com/data');
+    console.log(response.data); // Output: Sample Data
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+getData();
