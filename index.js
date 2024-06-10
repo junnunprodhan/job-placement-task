@@ -467,3 +467,75 @@ queue.enqueue(10);
 queue.enqueue(20);
 console.log(queue.dequeue()); // Output: 10
 console.log(queue.front()); // Output: 20
+
+// 1. Graph Algorithms
+// Problem: Finding the Shortest Path Using Dijkstra's Algorithm
+class PriorityQueue {
+  constructor() {
+    this.collection = [];
+  }
+  enqueue(element) {
+    if (this.isEmpty()) {
+      this.collection.push(element);
+    } else {
+      let added = false;
+      for (let i = 1; i <= this.collection.length; i++) {
+        if (element[1] < this.collection[i - 1][1]) {
+          this.collection.splice(i - 1, 0, element);
+          added = true;
+          break;
+        }
+      }
+      if (!added) {
+        this.collection.push(element);
+      }
+    }
+  }
+  dequeue() {
+    return this.collection.shift();
+  }
+  isEmpty() {
+    return this.collection.length === 0;
+  }
+}
+
+function dijkstra(graph, startNode) {
+  let distances = {};
+  let pq = new PriorityQueue();
+
+  pq.enqueue([startNode, 0]);
+  distances[startNode] = 0;
+
+  for (let node in graph) {
+    if (node !== startNode) {
+      distances[node] = Infinity;
+    }
+  }
+
+  while (!pq.isEmpty()) {
+    let shortestStep = pq.dequeue();
+    let currentNode = shortestStep[0];
+    let currentDistance = shortestStep[1];
+
+    for (let neighbor in graph[currentNode]) {
+      let weight = graph[currentNode][neighbor];
+      let distance = currentDistance + weight;
+
+      if (distance < distances[neighbor]) {
+        distances[neighbor] = distance;
+        pq.enqueue([neighbor, distance]);
+      }
+    }
+  }
+
+  return distances;
+}
+
+const graph = {
+  A: { B: 1, C: 4 },
+  B: { A: 1, C: 2, D: 5 },
+  C: { A: 4, B: 2, D: 1 },
+  D: { B: 5, C: 1 },
+};
+
+console.log(dijkstra(graph, 'A')); // Output: { A: 0, B: 1, C: 3, D: 4 }
