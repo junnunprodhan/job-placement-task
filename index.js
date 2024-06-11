@@ -782,3 +782,22 @@ bst.add(20);
 console.log(bst.findMin()); // Output: 3
 console.log(bst.findMax()); // Output: 22
 console.log(bst.isPresent(4)); // Output: true
+
+// 5. Throttle Function
+// Problem: Throttle Function to Limit Execution
+function throttle(func, limit) {
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+const log = () => console.log('Throttle');
+const throttledLog = throttle(log, 2000);
+window.addEventListener('resize', throttledLog);
