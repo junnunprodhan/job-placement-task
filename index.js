@@ -847,3 +847,13 @@ function sum(a, b, c) {
 
 const curriedSum = curry(sum);
 console.log(curriedSum(1)(2)(3)); // Output: 6
+
+// 4. Intersection of Two Arrays
+// Find the intersection of two arrays.
+function intersection(arr1, arr2) {
+  return arr1.filter(value => arr2.includes(value));
+}
+
+console.log(intersection([1, 2, 3], [2, 3, 4])); // Output: [2, 3]
+
+
