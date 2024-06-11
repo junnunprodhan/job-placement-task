@@ -884,3 +884,18 @@ const p3 = 42;
 promiseAll([p1, p2, p3]).then(values => console.log(values)); // Output: [3, 'foo', 42]
 
 
+// Deep Merge Objects
+// Deep merge two objects.
+function deepMerge(target, source) {
+  for (let key in source) {
+    if (source[key] instanceof Object && key in target) {
+      Object.assign(source[key], deepMerge(target[key], source[key]));
+    }
+  }
+  Object.assign(target || {}, source);
+  return target;
+}
+
+const obj12 = { a: 1, b: { c: 2 } };
+const obj22 = { b: { d: 3 } };
+console.log(deepMerge(obj12, obj22)); // Output: { a: 1, b: { c: 2, d: 3 } }
