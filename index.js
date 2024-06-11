@@ -856,4 +856,31 @@ function intersection(arr1, arr2) {
 
 console.log(intersection([1, 2, 3], [2, 3, 4])); // Output: [2, 3]
 
+// 5. Promise All Polyfill
+// Implement Promise.all.
+function promiseAll(promises) {
+  return new Promise((resolve, reject) => {
+    let results = [];
+    let completed = 0;
+    
+    promises.forEach((promise, index) => {
+      Promise.resolve(promise)
+        .then(result => {
+          results[index] = result;
+          completed += 1;
+          if (completed === promises.length) {
+            resolve(results);
+          }
+        })
+        .catch(error => reject(error));
+    });
+  });
+}
+
+const p1 = Promise.resolve(3);
+const p2 = new Promise((resolve, reject) => setTimeout(resolve, 100, 'foo'));
+const p3 = 42;
+
+promiseAll([p1, p2, p3]).then(values => console.log(values)); // Output: [3, 'foo', 42]
+
 
