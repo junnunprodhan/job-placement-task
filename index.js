@@ -801,3 +801,20 @@ function throttle(func, limit) {
 const log = () => console.log('Throttle');
 const throttledLog = throttle(log, 2000);
 window.addEventListener('resize', throttledLog);
+
+
+// Debouncing Function
+// Debouncing limits the rate at which a function can fire.
+function debounce(func, delay) {
+  let debounceTimer;
+  return function() {
+    const context = this;
+    const args = arguments;
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => func.apply(context, args), delay);
+  };
+}
+
+const logs = () => console.log('Debounce');
+const debouncedLog = debounce(logs, 2000);
+window.addEventListener('resize', debouncedLog);
