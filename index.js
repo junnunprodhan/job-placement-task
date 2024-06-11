@@ -818,3 +818,32 @@ function debounce(func, delay) {
 const logs = () => console.log('Debounce');
 const debouncedLog = debounce(logs, 2000);
 window.addEventListener('resize', debouncedLog);
+
+// 2. Deep Flatten Array
+// Flatten a nested array.
+function deepFlatten(arr) {
+  return arr.reduce((acc, val) => Array.isArray(val) ? acc.concat(deepFlatten(val)) : acc.concat(val), []);
+}
+
+console.log(deepFlatten([1, [2, [3, [4]], 5]])); // Output: [1, 2, 3, 4, 5]
+
+// 3. Currying
+// Transform a function with multiple arguments into a series of functions.
+function curry(func) {
+  return function curried(...args) {
+    if (args.length >= func.length) {
+      return func.apply(this, args);
+    } else {
+      return function(...args2) {
+        return curried.apply(this, args.concat(args2));
+      };
+    }
+  };
+}
+
+function sum(a, b, c) {
+  return a + b + c;
+}
+
+const curriedSum = curry(sum);
+console.log(curriedSum(1)(2)(3)); // Output: 6
