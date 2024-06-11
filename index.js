@@ -919,3 +919,22 @@ const add = (a, b) => a + b;
 const memoizedAdd = memoize(add);
 console.log(memoizedAdd(1, 2)); // Output: 3
 console.log(memoizedAdd(1, 2)); // Output: 3 (cached)
+
+// 9. Binary Search
+// Efficiently search for an element in a sorted array.
+function binarySearch(arr, target) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+    if (arr[mid] === target) return mid;
+    if (arr[mid] < target) left = mid + 1;
+    else right = mid - 1;
+  }
+
+  return -1;
+}
+
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(binarySearch(array, 4)); // Output: 3
