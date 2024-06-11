@@ -899,3 +899,23 @@ function deepMerge(target, source) {
 const obj12 = { a: 1, b: { c: 2 } };
 const obj22 = { b: { d: 3 } };
 console.log(deepMerge(obj12, obj22)); // Output: { a: 1, b: { c: 2, d: 3 } }
+
+// 8. Memoization
+// Cache the results of function calls.
+function memoize(func) {
+  const cache = new Map();
+  return function(...args) {
+    const key = JSON.stringify(args);
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    const result = func.apply(this, args);
+    cache.set(key, result);
+    return result;
+  };
+}
+
+const add = (a, b) => a + b;
+const memoizedAdd = memoize(add);
+console.log(memoizedAdd(1, 2)); // Output: 3
+console.log(memoizedAdd(1, 2)); // Output: 3 (cached)
