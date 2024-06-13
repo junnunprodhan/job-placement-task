@@ -939,6 +939,7 @@ function binarySearch(arr, target) {
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(binarySearch(array, 4)); // Output: 3
 
+
 // 10. Event Delegation
 // Efficiently handle events for multiple child elements.
 document.querySelector('#parent').addEventListener('click', function(event) {
