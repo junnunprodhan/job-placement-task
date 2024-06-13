@@ -921,6 +921,7 @@ console.log(memoizedAdd(1, 2)); // Output: 3
 console.log(memoizedAdd(1, 2)); // Output: 3 (cached)
 
 // 9. Binary Search
+
 // Efficiently search for an element in a sorted array.
 function binarySearch(arr, target) {
   let left = 0;
