@@ -48,4 +48,5 @@ function Log(target: any, key: string) {
   
   const product = new Product(100);
   product.price = 200; // Console: Setting value for price: 200
+
   
