@@ -950,3 +950,9 @@ document.querySelector('#parent').addEventListener('click', function(event) {
     console.log('Button', event.target.textContent, 'clicked');
   }
 });
+
+// Sum of an Array
+function sumArray(arr) {
+  return arr.reduce((sum, num) => sum + num, 0);
+}
+console.log(sumArray([1, 2, 3, 4, 5])); // 15
