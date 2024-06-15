@@ -970,3 +970,9 @@ function isPalindrome(str) {
   return str === str.split('').reverse().join('');
 }
 console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
+
+// Reverse a String
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+console.log(reverseString("hello")); // "olleh"
