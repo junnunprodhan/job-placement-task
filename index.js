@@ -956,3 +956,10 @@ function sumArray(arr) {
   return arr.reduce((sum, num) => sum + num, 0);
 }
 console.log(sumArray([1, 2, 3, 4, 5])); // 15
+
+// Factorial of a Number
+function factorial(n) {
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
+}
+console.log(factorial(5)); // 120
