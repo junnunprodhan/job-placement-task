@@ -963,3 +963,10 @@ function factorial(n) {
   return n * factorial(n - 1);
 }
 console.log(factorial(5)); // 120
+
+// Check if a String is a Palindrome
+function isPalindrome(str) {
+  str = str.toLowerCase().replace(/[\W_]/g, '');
+  return str === str.split('').reverse().join('');
+}
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
