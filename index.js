@@ -982,3 +982,10 @@ function largestNumber(arr) {
   return Math.max(...arr);
 }
 console.log(largestNumber([1, 2, 3, 4, 5])); // 5
+
+// Count Vowels in a String
+function countVowels(str) {
+  const vowels = 'aeiou';
+  return str.toLowerCase().split('').filter(char => vowels.includes(char)).length;
+}
+console.log(countVowels("hello world")); // 3
