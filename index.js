@@ -939,6 +939,7 @@ function binarySearch(arr, target) {
   return -1;
 }
 
+
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(binarySearch(array, 4)); // Output: 3
 
