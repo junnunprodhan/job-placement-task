@@ -975,6 +975,7 @@ console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
 function reverseString(str) {
   return str.split('').reverse().join('');
 }
+
 console.log(reverseString("hello")); // "olleh"
 
 // Find the Largest Number in an Array
@@ -986,7 +987,7 @@ console.log(largestNumber([1, 2, 3, 4, 5])); // 5
 // Count Vowels in a String
 function countVowels(str) {
   const vowels = 'aeiou';
-  
+
   return str.toLowerCase().split('').filter(char => vowels.includes(char)).length;
 }
 console.log(countVowels("hello world")); // 3
