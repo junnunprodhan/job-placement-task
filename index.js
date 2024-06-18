@@ -822,6 +822,7 @@ window.addEventListener('resize', debouncedLog);
 // 2. Deep Flatten Array
 // Flatten a nested array.
 function deepFlatten(arr) {
+  
   return arr.reduce((acc, val) => Array.isArray(val) ? acc.concat(deepFlatten(val)) : acc.concat(val), []);
 }
 
@@ -888,7 +889,7 @@ promiseAll([p1, p2, p3]).then(values => console.log(values)); // Output: [3, 'fo
 // Deep Merge Objects
 // Deep merge two objects.
 function deepMerge(target, source) {
-  
+
   for (let key in source) {
     if (source[key] instanceof Object && key in target) {
       Object.assign(source[key], deepMerge(target[key], source[key]));
