@@ -790,6 +790,7 @@ function throttle(func, limit) {
   return function() {
     const args = arguments;
     const context = this;
+    
     if (!inThrottle) {
       func.apply(context, args);
       inThrottle = true;
@@ -838,7 +839,7 @@ function curry(func) {
       return func.apply(this, args);
     } else {
       return function(...args2) {
-        
+
         return curried.apply(this, args.concat(args2));
       };
     }
