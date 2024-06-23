@@ -698,6 +698,7 @@ class BST {
 
   findMax() {
     let current = this.root;
+    
     while (current.right !== null) {
       current = current.right;
     }
@@ -790,7 +791,7 @@ function throttle(func, limit) {
   return function() {
     const args = arguments;
     const context = this;
-    
+
     if (!inThrottle) {
       func.apply(context, args);
       inThrottle = true;
