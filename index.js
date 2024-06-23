@@ -816,6 +816,7 @@ function debounce(func, delay) {
 }
 
 const logs = () => console.log('Debounce');
+
 const debouncedLog = debounce(logs, 2000);
 window.addEventListener('resize', debouncedLog);
 
