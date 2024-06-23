@@ -661,6 +661,7 @@ class BST {
 
   add(data) {
     const node = this.root;
+    
     if (node === null) {
       this.root = new Node(data);
       return;
@@ -698,7 +699,7 @@ class BST {
 
   findMax() {
     let current = this.root;
-    
+
     while (current.right !== null) {
       current = current.right;
     }
