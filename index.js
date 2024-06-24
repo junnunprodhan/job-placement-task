@@ -630,6 +630,7 @@ function solveNQueens(n) {
   }
 
   backtrack(0);
+  
   return res;
 }
 
@@ -661,7 +662,7 @@ class BST {
 
   add(data) {
     const node = this.root;
-    
+
     if (node === null) {
       this.root = new Node(data);
       return;
