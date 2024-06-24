@@ -453,8 +453,7 @@ class Queue {
   }
 
   front() {
-    if (this.items.length === 0) return "No elements in Queue";
-    return this.items[0];
+    if (this.items.length === 0) return "No elements in Queue";    return this.items[0];
   }
 
   isEmpty() {
@@ -514,7 +513,7 @@ function dijkstra(graph, startNode) {
 
   while (!pq.isEmpty()) {
     let shortestStep = pq.dequeue();
-    
+
     let currentNode = shortestStep[0];
     let currentDistance = shortestStep[1];
 
