@@ -514,6 +514,7 @@ function dijkstra(graph, startNode) {
 
   while (!pq.isEmpty()) {
     let shortestStep = pq.dequeue();
+    
     let currentNode = shortestStep[0];
     let currentDistance = shortestStep[1];
 
@@ -630,7 +631,7 @@ function solveNQueens(n) {
   }
 
   backtrack(0);
-  
+
   return res;
 }
 
