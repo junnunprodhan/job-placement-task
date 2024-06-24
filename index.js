@@ -383,6 +383,7 @@ console.log(reverseString(input)); // Output: "!dlroW ,olleH"
 // Problem: Checking for Palindrome
 function isPalindrome(str) {
   const cleaned = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  
   return cleaned === cleaned.split('').reverse().join('');
 }
 
@@ -400,7 +401,7 @@ console.log(clone); // Output: { a: 1, b: 2 }
 
 // Problem: Merging Two Objects
 function mergeObjects(obj1, obj2) {
-  
+
   return { ...obj1, ...obj2 };
 }
 
