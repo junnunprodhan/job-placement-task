@@ -400,6 +400,7 @@ console.log(clone); // Output: { a: 1, b: 2 }
 
 // Problem: Merging Two Objects
 function mergeObjects(obj1, obj2) {
+  
   return { ...obj1, ...obj2 };
 }
 
