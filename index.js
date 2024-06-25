@@ -299,6 +299,7 @@ studentsOfGrade.forEach(student => {
 // Step 3: Assign grades
 studentsOfGrade.forEach(student => {
   const average = student.average;
+  
   if (average >= 90) {
     student.grade = 'A';
   } else if (average >= 80) {
@@ -342,7 +343,7 @@ console.log(`${inches} inches is equal to ${feet} feet.`);
 function convertToNumber(text) {
   const number = Number(text);
   if (isNaN(number)) {
-    
+
       console.error("Invalid input: cannot convert to number.");
       return null;
   }
