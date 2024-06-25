@@ -274,6 +274,7 @@ function isLeapYear(year) {
 
 // Test the function
 const years = [1900, 2000, 2004, 2019, 2020];
+
 years.forEach(year => {
   console.log(`${year} is a leap year: ${isLeapYear(year)}`);
 });
@@ -299,7 +300,7 @@ studentsOfGrade.forEach(student => {
 // Step 3: Assign grades
 studentsOfGrade.forEach(student => {
   const average = student.average;
-  
+
   if (average >= 90) {
     student.grade = 'A';
   } else if (average >= 80) {
