@@ -232,6 +232,7 @@ const sortedStudents = sortStudentsByAverageGrade(students);
 
 // Print the result
 console.log('Students sorted by average grade in descending order:');
+
 sortedStudents.forEach(student => {
   console.log(`${student.name}: ${calculateAverage(student.grades).toFixed(2)}`);
 });
