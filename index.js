@@ -342,6 +342,7 @@ console.log(`${inches} inches is equal to ${feet} feet.`);
 function convertToNumber(text) {
   const number = Number(text);
   if (isNaN(number)) {
+    
       console.error("Invalid input: cannot convert to number.");
       return null;
   }
@@ -383,7 +384,7 @@ console.log(reverseString(input)); // Output: "!dlroW ,olleH"
 // Problem: Checking for Palindrome
 function isPalindrome(str) {
   const cleaned = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-  
+
   return cleaned === cleaned.split('').reverse().join('');
 }
 
