@@ -175,6 +175,7 @@ const uniqueNumbers = removeDuplicates(nums);
 
 // Print the result
 console.log('Original array:',nums );
+
 console.log('Array with unique values:', uniqueNumbers);
 
 
