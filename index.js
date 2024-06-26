@@ -29,6 +29,7 @@ const books = [
     return books.map(book => book.title);
   }
   const bookTitles = getBookTitles(books);
+  
   console.log(bookTitles);
   
 //   3.Task: Function Composition
@@ -68,7 +69,7 @@ const cars = [
     return cars.sort((a, b) => a.year - b.year);
   }
   const sortedCars = sortCarsByYear(cars);
-  
+
   console.log(sortedCars);
 
   // 5.Task: Find And Modify
