@@ -68,6 +68,7 @@ const cars = [
     return cars.sort((a, b) => a.year - b.year);
   }
   const sortedCars = sortCarsByYear(cars);
+  
   console.log(sortedCars);
 
   // 5.Task: Find And Modify
