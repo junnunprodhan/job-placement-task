@@ -11,6 +11,7 @@ const person = [
   ];
 
   const males = person.filter(person => person.gender !== "female");
+  
   const maleNames = males.map(person => person.name);
   console.log(maleNames);
   
@@ -29,7 +30,7 @@ const books = [
     return books.map(book => book.title);
   }
   const bookTitles = getBookTitles(books);
-  
+
   console.log(bookTitles);
   
 //   3.Task: Function Composition
