@@ -52,7 +52,7 @@ function square(num) {
     const result = addFive(doubled);
     return result;
   }
-  
+
   const number = 3;
   const finalResult = squareDoubleAddFive(number);
   console.log(finalResult);
@@ -71,7 +71,6 @@ const cars = [
     return cars.sort((a, b) => a.year - b.year);
   }
   const sortedCars = sortCarsByYear(cars);
-
   console.log(sortedCars);
 
   // 5.Task: Find And Modify
