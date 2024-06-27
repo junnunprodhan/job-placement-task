@@ -156,7 +156,6 @@ function countVowels(s) {
 
 // Example usage:
 const inputString = "Hello, World!";
-
 console.log(`The number of vowels in '${inputString}' is ${countVowels(inputString)}.`);
 
 
