@@ -115,7 +115,6 @@ const sumOfEvenNumbers = (arr) => {
 };
 
 const result = sumOfEvenNumbers(numbers);
-
 console.log(result); // Output will be 30 (2 + 4 + 6 + 8 + 10)
 
 // 7.Write A Function That Determines Whether A Given Year Is A Leap Year.
