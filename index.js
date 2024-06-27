@@ -11,7 +11,7 @@ const person = [
   ];
 
   const males = person.filter(person => person.gender !== "female");
-  
+
   const maleNames = males.map(person => person.name);
   console.log(maleNames);
   
@@ -52,6 +52,7 @@ function square(num) {
     const result = addFive(doubled);
     return result;
   }
+  
   const number = 3;
   const finalResult = squareDoubleAddFive(number);
   console.log(finalResult);
